@@ -6,7 +6,6 @@ En este práctico abordaremos algunos conceptos básicos sobre:
 - Docker
 - Dependencias en Python
 - Ejemplo
-- Conectarte a Azure Cloud mediante CLI
 
 # Git
 
@@ -166,3 +165,7 @@ Las dependencias son importantes porque permiten a los desarrolladores de Python
 Bibliotecas de Python: Se enumeran las bibliotecas de terceros que se utilizan en la aplicación, junto con sus versiones específicas (si no se encuentra la versión especificada el sistema se encargara de tomar la versión). 
 
 Por ejemplo, `requests==2.26.0` especifica la biblioteca Requests en la versión 2.26.0. y `requests`, no especifica la versión. 
+
+
+# docker build -t scraper .
+# docker run --name scraper -v "$(pwd)/imagenes:/app/imagenes" scraper python scraper.py
