@@ -167,5 +167,7 @@ Bibliotecas de Python: Se enumeran las bibliotecas de terceros que se utilizan e
 Por ejemplo, `requests==2.26.0` especifica la biblioteca Requests en la versión 2.26.0. y `requests`, no especifica la versión. 
 
 
-# docker build -t scraper .
-# docker run --name scraper -v "$(pwd)/imagenes:/app/imagenes" scraper python scraper.py
+#commands 
+  
+  - docker build -t scraper .
+  - docker run --name scraper -v "$(pwd)/imagenes:/app/imagenes" scraper python scraper.py
