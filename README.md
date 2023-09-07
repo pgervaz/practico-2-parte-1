@@ -32,10 +32,24 @@ Familiarízate con los conceptos básicos de Docker, como imágenes, contenedore
 El comando docker build toma como argumento la ruta al directorio que contiene el archivo Dockerfile. Ejemplo: `docker build -t scraper .`
 
 3. Ejecuta el comando **docker run** y especifica la imagen que deseas utilizar. 
-  El argumento `-rm` del comando docker run indica a Docker que elimine automáticamente el contenedor después de que se detenga.
+
+  Crea una carpeta llamada imagenes.
   Ejemplo: `docker run --name scraper -v "$(pwd)/imagenes:/app/imagenes" scraper python scraper.py`
 
 Puedes usar el dashboard para ver tus contenedores, imagenes y volumenes 
+
+- docker run: Este comando se utiliza para ejecutar un contenedor de Docker. Docker es una plataforma de contenedores que permite empaquetar aplicaciones y sus dependencias en un entorno aislado.
+
+- --name scraper: Esto establece un nombre para el contenedor que se está creando. En este caso, el contenedor se llamará "scraper".
+
+- -v "$(pwd)/imagenes:/app/imagenes": Este es un argumento de Docker que se utiliza para montar un volumen. Un volumen en Docker es un mecanismo que permite compartir datos entre el sistema host y el contenedor. En este caso, se está montando un volumen llamado "imagenes". A continuación, se explica en detalle:
+
+- $(pwd)/imagenes: $(pwd) es una expansión de comandos en la que se obtiene la ruta actual del directorio de trabajo en el sistema host. Esto se utiliza para crear una ruta absoluta al directorio "imagenes" en el sistema host.
+
+- :/app/imagenes: Esto indica la ruta dentro del contenedor donde se montará el volumen. En este caso, se montará en el directorio "/app/imagenes" dentro del contenedor.
+scraper: Este es el nombre de la imagen de Docker que se utilizará para crear el contenedor. Las imágenes de Docker son plantillas que contienen un sistema de archivos y configuración para crear contenedores.
+
+- python scraper.py: Esto es el comando que se ejecutará dentro del contenedor. En este caso, se está ejecutando un script de Python llamado "scraper.py" utilizando el intérprete de Python.
 
 
 ### Además del Dockerfile, para ejecutar un contenedor Docker para una aplicación Python necesitarás lo siguiente:
