@@ -34,3 +34,5 @@ if __name__ == "__main__":
 
 # docker build -t scraper .
 # docker run --name scraper -v "$(pwd)/imagenes:/app/imagenes" scraper python scraper.py
+# Con el comando de arriba se corre la imagen de docker scraper y se monta un volumen en la ruta pwd/imagenes donde
+# se copian los archivos de la carpeta app/images de la imagen luego de correr el sraper con python scraper.py
